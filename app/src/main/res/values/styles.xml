@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Habilitar la Toolbar-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorBackground">@color/primary_light</item>
+    </style>
+
+    <!--Etiqueta flotante-->
+    <style name="AppTheme.FloatingLabel" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorTealFloatingLabel</item>
+        <item name="android:textSize">@dimen/floating_label</item>
+    </style>
+
+    <!--Campo de texto-->
+    <style name="EditText" parent="AppTheme">
+        <!-- cursor y línea normal-->
+        <item name="android:colorControlNormal">@color/colorNavyEditText</item>
+        <!-- cursor y línea con foco-->
+        <item name="android:colorControlActivated">@color/colorTealFloatingLabel</item>
+    </style>
+
+    <!-- mensaje de error debajo del EditText-->
+    <style name="AppTheme.EditTextError" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorOrangeError</item>
+        <item name="android:textSize">@dimen/error</item>
+    </style>
+
+    <style name="MiRaisedButton" parent="Theme.AppCompat.Light">
+        <item name="android:colorButtonNormal">@color/colorAccent</item>
+        <item name="android:colorControlHighlight">@color/icons</item>
+        <item name="android:textColor">@color/icons</item>
+    </style>
+
+</resources>

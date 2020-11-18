@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuItemContacto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:logo="@mipmap/huella_gato"
+            app:layout_scrollFlags="scroll|enterAlways">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="512dp"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margintop_relativelayout"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/nombre"
+            app:hintTextAppearance="@style/AppTheme.FloatingLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/user_name"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/colorNavyEditText"
+                android:theme="@style/EditText"
+                tools:ignore="RtlHardcoded" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_input_layout_nombre"
+            android:hint="@string/email"
+            app:hintTextAppearance="@style/AppTheme.FloatingLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/colorNavyEditText"
+                android:theme="@style/EditText"
+                tools:ignore="RtlHardcoded" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_input_layout_email"
+            android:hint="@string/mensaje"
+            app:hintTextAppearance="@style/AppTheme.FloatingLabel">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMensaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/mensaje"
+                android:inputType="text"
+                android:textColorHint="@color/colorNavyEditText"
+                android:theme="@style/EditText"
+                tools:ignore="RtlHardcoded" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="bottom"
+            android:background="@color/colorAccent"
+            android:drawableLeft="@drawable/enviar_mensaje"
+            android:gravity="center_vertical|center_horizontal|center"
+            android:onClick="enviarMail"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:text="@string/enviar_comentario"
+            android:textStyle="bold"
+            android:theme="@style/MiRaisedButton"
+            android:visibility="visible"
+            tools:ignore="RtlHardcoded" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

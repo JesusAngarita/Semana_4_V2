@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imgMascotaPerfil"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/perro_dos"
+        app:civ_border_color="#EEEEEE"
+        app:civ_border_width="4dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="10"
+        app:civ_shadow_color="#8BC34A" />
+
+    <TextView
+        android:id="@+id/tvNombrePerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Dollar"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imgMascotaPerfil"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_margin="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingBottom="10dip"
+        android:layout_below="@id/tvNombrePerfil"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/view"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_marginStart="@dimen/gridcardperfil">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMascotasPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/margin_recyclerperfilmascota" />
+
+    </GridLayout>
+
+
+</RelativeLayout>

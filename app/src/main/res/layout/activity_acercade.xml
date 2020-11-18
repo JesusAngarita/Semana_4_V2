@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Acercade">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/appBarLayout">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:logo="@mipmap/huella_gato"
+            app:layout_scrollFlags="scroll|enterAlways">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:layout_below="@+id/appBarLayout">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/ivContacto"
+            android:layout_width="@dimen/ancho_bio_desarrollador"
+            android:layout_height="@dimen/alto_bio_desarrollador"
+            android:src="@drawable/fotoperfil"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ivContacto"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/biografia"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/bio_desarrollador_nombre"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/bio_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/ivContacto"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/biografia_email"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/bio_desarrollador_email"
+            android:textStyle="italic"
+            android:typeface="normal" />
+    </LinearLayout>
+
+</RelativeLayout>
